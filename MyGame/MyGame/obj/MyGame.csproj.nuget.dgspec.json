@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SebastiaanGevers\\Documents\\1 School\\Semester 1\\Game Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {}
+    "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SebastiaanGevers\\Documents\\1 School\\Semester 1\\Game Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {
+    "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SebastiaanGevers\\Documents\\1 School\\Semester 1\\Game Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\SebastiaanGevers\\Documents\\1 School\\Semester 1\\Game Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
-        "packagesPath": "C:\\Users\\SebastiaanGevers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SebastiaanGevers\\Documents\\1 School\\Semester 1\\Game Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\obj\\",
+        "projectPath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
+        "packagesPath": "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\SebastiaanGevers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sebastiaan_Gevers\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

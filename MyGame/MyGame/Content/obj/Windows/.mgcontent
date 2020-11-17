@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/Game_Dev/Labo/Project/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/Chef.png</File>
+    <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/Game_Dev/Labo/Project/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefLinks.png</File>
+    <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/Game_Dev/Labo/Project/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefRechts.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
