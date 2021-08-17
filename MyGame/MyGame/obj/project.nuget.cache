@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAq4Y68bhsMVdTk+b8/NpnfJg3Xy+8ZCHtdkqS5k3oYDWvgObUhPGuEq0zT+8psn2wiWwQVoYbk/cq3lyBl9yg==",
+  "dgSpecHash": "TPrryl+EGYNp6hvdvg1y3IK+D2kUBEvvLM69jNqEI8fMDO8eFfpHDWW47uoABlirpoGwym+Ui2Eu4xPhvS/yEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\Game_Dev\\Labo\\Project\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
+  "projectFilePath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
@@ -26,7 +26,7 @@
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\monogame.framework.windowsdx\\3.8.0.1641\\monogame.framework.windowsdx.3.8.0.1641.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\runtime.native.system.io.compression\\4.1.0\\runtime.native.system.io.compression.4.1.0.nupkg.sha512",
+    "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\runtime.native.system.io.compression\\4.1.0\\runtime.native.system.io.compression.4.1.0.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\runtime.native.system.net.http\\4.0.1\\runtime.native.system.net.http.4.0.1.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\runtime.native.system.net.security\\4.0.1\\runtime.native.system.net.security.4.0.1.nupkg.sha512",
     "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\runtime.native.system.security.cryptography\\4.0.1\\runtime.native.system.security.cryptography.4.0.1.nupkg.sha512",
