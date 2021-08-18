@@ -22,13 +22,14 @@ namespace MyGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            _graphics.PreferredBackBufferWidth = 1920;
+            _graphics.PreferredBackBufferHeight = 1080;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-           
+            // TODO: Add your initialization logic here        
 
             base.Initialize();
         }
@@ -50,9 +51,7 @@ namespace MyGame
         }
 
         protected override void Update(GameTime gameTime)
-        {
-
-            
+        {  
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
