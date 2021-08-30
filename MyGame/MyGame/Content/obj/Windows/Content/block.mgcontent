@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefLinks.png</SourceFile>
-  <SourceTime>2021-02-16T12:12:41.3680179+01:00</SourceTime>
-  <DestFile>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/bin/Windows/chefLinks.xnb</DestFile>
-  <DestTime>2021-08-30T15:51:22.5722224+02:00</DestTime>
+  <SourceFile>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/block.jpg</SourceFile>
+  <SourceTime>2021-08-30T15:43:08.7785959+02:00</SourceTime>
+  <DestFile>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/bin/Windows/Content/block.xnb</DestFile>
+  <DestTime>2021-08-30T15:51:23.5157071+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

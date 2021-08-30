@@ -115,3 +115,4 @@ C:\Users\Sebastiaan_Gevers\Documents\1_School\Semester_1\GameDev\game-developmen
 C:\Users\Sebastiaan_Gevers\Documents\1_School\Semester_1\GameDev\game-development-project-2020-2021-SebastiaanGevers\MyGame\MyGame\obj\Debug\netcoreapp3.1\MyGame.dll
 C:\Users\Sebastiaan_Gevers\Documents\1_School\Semester_1\GameDev\game-development-project-2020-2021-SebastiaanGevers\MyGame\MyGame\obj\Debug\netcoreapp3.1\MyGame.pdb
 C:\Users\Sebastiaan_Gevers\Documents\1_School\Semester_1\GameDev\game-development-project-2020-2021-SebastiaanGevers\MyGame\MyGame\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
+C:\Users\Sebastiaan_Gevers\Documents\1_School\Semester_1\GameDev\game-development-project-2020-2021-SebastiaanGevers\MyGame\MyGame\bin\Debug\netcoreapp3.1\Content\block.xnb

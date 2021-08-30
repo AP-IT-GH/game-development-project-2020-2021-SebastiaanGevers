@@ -4,11 +4,13 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/block.jpg</File>
     <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/Chef.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefLinks.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Documents/1_School/Semester_1/GameDev/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefRechts.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
