@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MyGame.Input;
+using MyGame.levels;
 using System;
 
 namespace MyGame
@@ -13,7 +14,12 @@ namespace MyGame
 
         //texture2D voor Chef
         private Texture2D textureChefR;
+        private Texture2D blokTexture;
         Hero hero;
+
+        // level voorloopig
+        Level1 level1;
+        
         
  
 
@@ -41,6 +47,7 @@ namespace MyGame
             // TODO: use this.Content to load your game content here
 
             textureChefR = Content.Load<Texture2D>("chefRechts");
+            blokTexture = Content.Load<Texture2D>("block");
 
             InitializeGameObjects();
         }
@@ -48,6 +55,8 @@ namespace MyGame
         private void InitializeGameObjects()
         {
             hero = new Hero(textureChefR, new KeyBoardReader());
+            level1 = new Level1(blokTexture);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -59,7 +68,7 @@ namespace MyGame
             // TODO: Add your update logic here
 
             hero.Update(gameTime);
-
+            level1.CreateWorld();
             base.Update(gameTime);
         }
 
@@ -69,8 +78,12 @@ namespace MyGame
 
             _spriteBatch.Begin();
 
+            
+            level1.DrawWorld(_spriteBatch);
             hero.Draw(_spriteBatch);
-                     
+
+
+
             _spriteBatch.End();            
 
             base.Draw(gameTime);
