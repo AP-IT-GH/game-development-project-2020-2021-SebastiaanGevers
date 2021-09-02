@@ -34,7 +34,7 @@ namespace MyGame.levels
                 {
                     if (byteTileArray[x, y] == 1)
                     {
-                        blokArray[x, y] = new Blok(blokTexture, new Vector2(y * 128, x * 64));
+                        blokArray[x, y] = new Blok(blokTexture, new Vector2(y * 64, x * 64));
                     }
                 }
             }
