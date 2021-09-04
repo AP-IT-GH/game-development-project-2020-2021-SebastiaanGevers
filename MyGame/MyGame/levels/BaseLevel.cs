@@ -11,15 +11,21 @@ namespace MyGame.levels
     public abstract class BaseLevel
     {
         public Texture2D blokTexture;
+        public Texture2D doorTopTexture;
+        public Texture2D doorBotTexture;
+
         public byte[,] byteTileArray;
         public Blok[,] blokArray;
 
-        public BaseLevel(Texture2D _blokTexture )
+        public BaseLevel(Texture2D _blokTexture, Texture2D _doorTopTexture, Texture2D _doorBotTexture)
         {
             TileArray();
             blokArray = new Blok[byteTileArray.GetLength(0), byteTileArray.GetLength(1)];
 
             blokTexture = _blokTexture;
+            doorTopTexture = _doorTopTexture;
+            doorBotTexture = _doorBotTexture;
+
             CreateWorld();
         }
 
@@ -35,6 +41,14 @@ namespace MyGame.levels
                     if (byteTileArray[x, y] == 1)
                     {
                         blokArray[x, y] = new Blok(blokTexture, new Vector2(y * 64, x * 64));
+                    }
+                    if (byteTileArray[x, y] == 2)
+                    {
+                        blokArray[x, y] = new Blok(doorTopTexture, new Vector2(y * 64, x * 64));
+                    }
+                    if (byteTileArray[x, y] == 3)
+                    {
+                        blokArray[x, y] = new Blok(doorBotTexture, new Vector2(y * 64, x * 64));
                     }
                 }
             }

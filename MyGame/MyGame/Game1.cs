@@ -15,6 +15,8 @@ namespace MyGame
         //texture2D voor Chef
         private Texture2D textureChefR;
         private Texture2D blokTexture;
+        private Texture2D doorTopTexture;
+        private Texture2D doorBotTexture;
         Hero hero;
 
         // level voorloopig
@@ -48,6 +50,8 @@ namespace MyGame
 
             textureChefR = Content.Load<Texture2D>("chefRechts");
             blokTexture = Content.Load<Texture2D>("block");
+            doorTopTexture = Content.Load<Texture2D>("doorAangepastBoven");
+            doorBotTexture = Content.Load<Texture2D>("doorAangepastOnder");
 
             InitializeGameObjects();
         }
@@ -55,7 +59,7 @@ namespace MyGame
         private void InitializeGameObjects()
         {
             hero = new Hero(textureChefR, new KeyBoardReader());
-            level1 = new Level1(blokTexture);
+            level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture);
 
         }
 

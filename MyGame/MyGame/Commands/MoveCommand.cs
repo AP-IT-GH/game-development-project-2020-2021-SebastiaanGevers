@@ -12,7 +12,7 @@ namespace MyGame.Commands
 
         public MoveCommand()
         {
-            this.speed = new Vector2(5, 0);
+            this.speed = new Vector2(5, 2);
         }
 
         void IGameCommand.Execute(ITransform transform, Vector2 direction)

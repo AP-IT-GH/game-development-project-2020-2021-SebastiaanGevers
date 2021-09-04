@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace MyGame.Input
@@ -32,6 +33,7 @@ namespace MyGame.Input
             }
             if (state.IsKeyDown(Keys.Up))
             {
+                //Debug.WriteLine("naar boven");
                 direction = new Vector2(0, -1);
             }
 

@@ -16,7 +16,8 @@ namespace MyGame
         
         //picture
         Texture2D heroTexture;
-        Animatie animatie;
+        Animatie animatieR;
+        Animatie animatieL;
 
         //movement    
         private Vector2 snelheid;
@@ -36,11 +37,18 @@ namespace MyGame
         {
             heroTexture = texture;
             
-            animatie = new Animatie();
-            animatie.AddFrame(new AnimatioFrame(new Rectangle(0,0,120,161)));
-            animatie.AddFrame(new AnimatioFrame(new Rectangle(130, 0, 120, 161)));
-            animatie.AddFrame(new AnimatioFrame(new Rectangle(260, 0, 120, 161)));
-            animatie.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
+            animatieR = new Animatie();
+            animatieR.AddFrame(new AnimatioFrame(new Rectangle(0,0,120,161)));
+            animatieR.AddFrame(new AnimatioFrame(new Rectangle(130, 0, 120, 161)));
+            animatieR.AddFrame(new AnimatioFrame(new Rectangle(260, 0, 120, 161)));
+            animatieR.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
+
+            animatieL = new Animatie();
+            animatieL.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
+            animatieL.AddFrame(new AnimatioFrame(new Rectangle(260, 0, 120, 161)));
+            animatieL.AddFrame(new AnimatioFrame(new Rectangle(130, 0, 120, 161)));
+            animatieL.AddFrame(new AnimatioFrame(new Rectangle(0, 0, 120, 161)));
+
 
             // positie = new Vector2(10, 10);
             snelheid = new Vector2(1, 1);
@@ -67,7 +75,7 @@ namespace MyGame
              }*/
 
 
-            animatie.Update(gameTime);
+            animatieR.Update(gameTime);
         }
 
         private void MoveHorizontal(Vector2 _direction)
@@ -95,7 +103,8 @@ namespace MyGame
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(heroTexture, Position, animatie.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(0, 0), 0.5f, SpriteEffects.None, 0);
+            if()
+            spriteBatch.Draw(heroTexture, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130,-1890), 0.5f, SpriteEffects.None, 0);
         }
     }
 }

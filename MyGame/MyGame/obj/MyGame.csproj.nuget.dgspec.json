@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {}
+    "C:\\Users\\Sebastiaan_Gevers\\Desktop\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {
+    "C:\\Users\\Sebastiaan_Gevers\\Desktop\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastiaan_Gevers\\Desktop\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
+        "projectPath": "C:\\Users\\Sebastiaan_Gevers\\Desktop\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\MyGame.csproj",
         "packagesPath": "C:\\Users\\Sebastiaan_Gevers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sebastiaan_Gevers\\Documents\\1_School\\Semester_1\\GameDev\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\obj\\",
+        "outputPath": "C:\\Users\\Sebastiaan_Gevers\\Desktop\\game-development-project-2020-2021-SebastiaanGevers\\MyGame\\MyGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
