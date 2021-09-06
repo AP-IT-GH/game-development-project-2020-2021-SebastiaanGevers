@@ -3,7 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MyGame.Input;
 using MyGame.levels;
+using MyGame.States;
 using System;
+using static System.Windows.Forms.AxHost;
+using State = MyGame.States.State;
 
 namespace MyGame
 {
@@ -13,15 +16,24 @@ namespace MyGame
         private SpriteBatch _spriteBatch;
 
         //texture2D voor Chef
-        private Texture2D textureChefR;
-        private Texture2D blokTexture;
-        private Texture2D doorTopTexture;
-        private Texture2D doorBotTexture;
-        Hero hero;
+        //private Texture2D textureChefR;
+        //private Texture2D blokTexture;
+        //Hero hero;
 
-        // level voorloopig
-        Level1 level1;
-        
+        //// door level
+        //private Texture2D doorTopTexture;
+        //private Texture2D doorBotTexture;
+
+        //// level voorloopig
+        //Level1 level1;
+
+        //states
+        private State _currentState;
+        private State _nextState;
+        public void ChangeState(State _state)
+        {
+            _nextState = _state;
+        }
         
  
 
@@ -29,8 +41,8 @@ namespace MyGame
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
             IsMouseVisible = true;
-
             _graphics.PreferredBackBufferWidth = 1920;
             _graphics.PreferredBackBufferHeight = 1080;
         }
@@ -38,7 +50,7 @@ namespace MyGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here        
-
+            IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -46,49 +58,64 @@ namespace MyGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            //textureChefR = Content.Load<Texture2D>("chefRechts");
+            //blokTexture = Content.Load<Texture2D>("block");
+            //doorTopTexture = Content.Load<Texture2D>("doorAangepastBoven");
+            //doorBotTexture = Content.Load<Texture2D>("doorAangepastOnder");
 
-            textureChefR = Content.Load<Texture2D>("chefRechts");
-            blokTexture = Content.Load<Texture2D>("block");
-            doorTopTexture = Content.Load<Texture2D>("doorAangepastBoven");
-            doorBotTexture = Content.Load<Texture2D>("doorAangepastOnder");
+            _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
+
 
             InitializeGameObjects();
         }
 
+        ////internal void ChangeState()
+        ////{
+        ////    throw new NotImplementedException();
+        ////}
+
         private void InitializeGameObjects()
         {
-            hero = new Hero(textureChefR, new KeyBoardReader());
-            level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture);
+            //hero = new Hero(textureChefR, new KeyBoardReader());
+            //level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture);
 
         }
 
         protected override void Update(GameTime gameTime)
         {  
 
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            if(_nextState != null)
+            {
+                _currentState = _nextState;
+                _nextState = null;
+            }
 
-            hero.Update(gameTime);
-            level1.CreateWorld();
+            _currentState.update(gameTime);
+            _currentState.PostUpdate(gameTime);
+
+            
+            // updaten hero en level moet naar game state
+            //hero.Update(gameTime);
+            //level1.CreateWorld();
+
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DarkGray);      
+            GraphicsDevice.Clear(Color.DarkGray);
+            _currentState.Draw(gameTime, _spriteBatch);
 
-            _spriteBatch.Begin();
-
-            
-            level1.DrawWorld(_spriteBatch);
-            hero.Draw(_spriteBatch);
-
-
-
-            _spriteBatch.End();            
+            // moet ook naar game state
+            //_spriteBatch.Begin();            
+            //level1.DrawWorld(_spriteBatch);
+            //hero.Draw(_spriteBatch);
+            //_spriteBatch.End();            
 
             base.Draw(gameTime);
         }
