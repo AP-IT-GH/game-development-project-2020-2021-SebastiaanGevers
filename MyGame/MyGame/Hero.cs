@@ -15,7 +15,8 @@ namespace MyGame
     {
         
         //picture
-        Texture2D heroTexture;
+        Texture2D heroTextureR;
+        Texture2D heroTextureL;
         Animatie animatieR;
         Animatie animatieL;
 
@@ -23,6 +24,8 @@ namespace MyGame
         private Vector2 snelheid;
         private Vector2 versnelling;       
         public Vector2 Position { get ; set; }
+        private bool moveRight = false;
+        
 
         // inputs
         private IInputReader inputReader;
@@ -33,15 +36,22 @@ namespace MyGame
 
            
 
-        public Hero(Texture2D texture, IInputReader reader)
+        public Hero(Texture2D textureR, Texture2D textureL, IInputReader reader)
         {
-            heroTexture = texture;
+            heroTextureR = textureR;
+            heroTextureL = textureL;
             
             animatieR = new Animatie();
             animatieR.AddFrame(new AnimatioFrame(new Rectangle(0,0,120,161)));
             animatieR.AddFrame(new AnimatioFrame(new Rectangle(130, 0, 120, 161)));
             animatieR.AddFrame(new AnimatioFrame(new Rectangle(260, 0, 120, 161)));
             animatieR.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
+
+            //animatieL = new Animatie();
+            //animatieL.AddFrame(new AnimatioFrame(new Rectangle(0, 0, 120, 161)));
+            //animatieL.AddFrame(new AnimatioFrame(new Rectangle(130, 0, 120, 161)));
+            //animatieL.AddFrame(new AnimatioFrame(new Rectangle(260, 0, 120, 161)));
+            //animatieL.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
 
             animatieL = new Animatie();
             animatieL.AddFrame(new AnimatioFrame(new Rectangle(390, 0, 120, 161)));
@@ -57,6 +67,7 @@ namespace MyGame
             //Read the input for my hero
             //keyboard
             this.inputReader = reader;
+            
             moveCommand = new MoveCommand();
            //Mouse
            // mouseReader = new MouseReader();           
@@ -66,9 +77,18 @@ namespace MyGame
 
         public void Update(GameTime gameTime)
         {
-            var direction = inputReader.ReadInput();
+            var direction = inputReader.ReadInput();            
             MoveHorizontal(direction);
 
+            if (direction.X == 1)
+            {
+                moveRight = true;
+            }
+            else if(direction.X==-1)
+            {
+                moveRight = false;
+            }
+            
             /* if (inputReader.ReadFollower())
              {
                  Move(mouseReader.ReadInput());
@@ -103,8 +123,16 @@ namespace MyGame
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if()
-            spriteBatch.Draw(heroTexture, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130,-1890), 0.5f, SpriteEffects.None, 0);
+
+            if (moveRight)
+            {
+                spriteBatch.Draw(heroTextureR, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+            }
+            else
+            {
+                spriteBatch.Draw(heroTextureL, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+            }
+            
         }
     }
 }

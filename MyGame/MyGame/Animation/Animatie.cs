@@ -36,13 +36,15 @@ namespace MyGame.Animation
             if(frameMovement>= CurrentFrame.SourceRectangle.Width/8)
             {
                 counter++;
-                frameMovement = 0;
-            }            
+                frameMovement = 0;                
+            }
 
-            if(counter >= frames.Count)
+            if (counter >= frames.Count)
             {
                 counter = 0;
             }
+
+
         }
     
     }
