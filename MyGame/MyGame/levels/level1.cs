@@ -10,7 +10,7 @@ namespace MyGame.levels
 {
     class Level1 : BaseLevel
     {
-        public Level1(Texture2D _blokTexture,Texture2D _doorTopTexture,Texture2D _doorBotTexture): base(_blokTexture, _doorTopTexture, _doorBotTexture)
+        public Level1(Texture2D _blokTexture,Texture2D _doorTopTexture,Texture2D _doorBotTexture, Texture2D colTetxture ): base(_blokTexture, _doorTopTexture, _doorBotTexture, colTetxture)
         {
             TileArray();
         }

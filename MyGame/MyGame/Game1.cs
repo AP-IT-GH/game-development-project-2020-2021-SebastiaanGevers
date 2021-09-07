@@ -58,11 +58,12 @@ namespace MyGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //textureChefR = Content.Load<Texture2D>("chefRechts");
-            //blokTexture = Content.Load<Texture2D>("block");
-            //doorTopTexture = Content.Load<Texture2D>("doorAangepastBoven");
-            //doorBotTexture = Content.Load<Texture2D>("doorAangepastOnder");
+            /*
+             voor de states komt van deze video en heb hier en daar aanpassingen gedaan
+                - https://github.com/Oyyou/MonoGame_Tutorials/tree/master/MonoGame_Tutorials/Tutorial012
+                - https://www.youtube.com/watch?v=76Mz7ClJLoE&t=624s
 
+            */
             _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
 
 

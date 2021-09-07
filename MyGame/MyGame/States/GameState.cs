@@ -20,6 +20,7 @@ namespace MyGame.States
         // door level
         private Texture2D doorTopTexture;
         private Texture2D doorBotTexture;
+        private Texture2D collisionTexture;
 
         // level voorloopig
         Level1 level1;
@@ -41,15 +42,16 @@ namespace MyGame.States
             textureChefL = _content.Load<Texture2D>("chefLinks");
             blokTexture = _content.Load<Texture2D>("block");
             doorTopTexture = _content.Load<Texture2D>("doorAangepastBoven");
-            doorBotTexture = _content.Load<Texture2D>("doorAangepastOnder");            
+            doorBotTexture = _content.Load<Texture2D>("doorAangepastOnder");
+            collisionTexture = _content.Load<Texture2D>("collision block");
             InitializeGameObjects();          
             
         }
 
         private void InitializeGameObjects()
         {
-            hero = new Hero(textureChefR,textureChefL, new KeyBoardReader());
-            level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture);
+            hero = new Hero(textureChefR,textureChefL, collisionTexture, new KeyBoardReader());
+            level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture,collisionTexture);
         }        
 
         public override void PostUpdate(GameTime _gameTime)

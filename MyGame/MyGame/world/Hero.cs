@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MyGame.Animation;
+using MyGame.collision;
 using MyGame.Commands;
 using MyGame.Input;
 using MyGame.interfaces;
@@ -11,7 +12,7 @@ using System.Text;
 
 namespace MyGame
 {
-    class Hero:IGameObject, ITransform
+    class Hero:IGameObject, ITransform,IblockColided
     {
         
         //picture
@@ -23,7 +24,8 @@ namespace MyGame
         //movement    
         private Vector2 snelheid;
         private Vector2 versnelling;       
-        public Vector2 Position { get ; set; }
+        public Vector2 Position { get ; set; }        
+
         private bool moveRight = false;
         
 
@@ -34,12 +36,19 @@ namespace MyGame
         private IGameCommand moveCommand;
         //private IGameCommand moveToComannd;
 
-           
+        //collision
+        private Rectangle _collisionRectangleA;
+        private Rectangle _collisionRectangleB;
+        private Texture2D collisionTexture;
 
-        public Hero(Texture2D textureR, Texture2D textureL, IInputReader reader)
+
+
+
+        public Hero(Texture2D textureR, Texture2D textureL ,Texture2D textureColision, IInputReader reader)
         {
             heroTextureR = textureR;
             heroTextureL = textureL;
+            collisionTexture = textureColision;
             
             animatieR = new Animatie();
             animatieR.AddFrame(new AnimatioFrame(new Rectangle(0,0,120,161)));
@@ -69,11 +78,18 @@ namespace MyGame
             this.inputReader = reader;
             
             moveCommand = new MoveCommand();
-           //Mouse
-           // mouseReader = new MouseReader();           
-           // moveCommand = new MoveToCommando();
+            //Mouse
+            // mouseReader = new MouseReader();           
+            // moveCommand = new MoveToCommando();
+
+            //collision
+            _collisionRectangleA = new Rectangle((int)Position.X, (int)Position.Y, 10, 161);
+            _collisionRectangleB = new Rectangle((int)Position.X+120, (int)Position.Y, 10, 161);
 
         }
+
+        Rectangle IblockColided.collisionRectangleA { get => _collisionRectangleA; set => _collisionRectangleA = value; }
+        Rectangle IblockColided.collisionRectangleB { get => _collisionRectangleB; set => _collisionRectangleB = value; }
 
         public void Update(GameTime gameTime)
         {
@@ -88,7 +104,9 @@ namespace MyGame
             {
                 moveRight = false;
             }
-            
+            _collisionRectangleA = new Rectangle((int)Position.X, (int)Position.Y, 10, 161);
+            _collisionRectangleB = new Rectangle((int)Position.X + 120, (int)Position.Y, 10, 161);
+
             /* if (inputReader.ReadFollower())
              {
                  Move(mouseReader.ReadInput());
@@ -132,7 +150,12 @@ namespace MyGame
             {
                 spriteBatch.Draw(heroTextureL, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
             }
-            
+
+            spriteBatch.Draw(collisionTexture,Position ,_collisionRectangleA, Color.AliceBlue, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+            spriteBatch.Draw(collisionTexture,Position, _collisionRectangleB, Color.AliceBlue, 0, new Vector2(-250, -1890), 0.5f, SpriteEffects.None, 0);
+
+
+
         }
     }
 }

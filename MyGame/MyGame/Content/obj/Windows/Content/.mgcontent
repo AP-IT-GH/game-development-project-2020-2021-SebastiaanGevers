@@ -9,6 +9,8 @@
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/Chef.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefLinks.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/chefRechts.png</File>
+    <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/collision block.jpg</File>
+    <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/collisionhero.jpg</File>
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/Controls/Button.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/doorAangepastBoven.png</File>
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/doorAangepastOnder.png</File>
@@ -16,6 +18,8 @@
     <File>C:/Users/Sebastiaan_Gevers/Desktop/game-development-project-2020-2021-SebastiaanGevers/MyGame/MyGame/Content/Fonts/File.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
