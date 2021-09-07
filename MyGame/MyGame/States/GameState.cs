@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MyGame.collision;
 using MyGame.Input;
 using MyGame.levels;
 using System;
@@ -25,14 +26,25 @@ namespace MyGame.States
         // level voorloopig
         Level1 level1;
 
-
-
-
+        //collision
+        CollisionManger collisionLevel1;
+        Game1 _game;
         
+        GraphicsDevice _grapichDevice;
+        ContentManager _content;
+
+
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
+            _game = game;
+            _content = content;
+            _graphicsDevice = graphicsDevice;
+            
+
+
             LoadContent();
+            
         }
 
         protected void LoadContent()
@@ -52,6 +64,7 @@ namespace MyGame.States
         {
             hero = new Hero(textureChefR,textureChefL, collisionTexture, new KeyBoardReader());
             level1 = new Level1(blokTexture,doorTopTexture,doorBotTexture,collisionTexture);
+            collisionLevel1 = new CollisionManger(level1.Collides, _game,hero,_content,_graphicsDevice);
         }        
 
         public override void PostUpdate(GameTime _gameTime)

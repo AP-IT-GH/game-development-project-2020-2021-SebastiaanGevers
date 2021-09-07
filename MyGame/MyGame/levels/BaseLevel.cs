@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MyGame.collision;
 using MyGame.world;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,9 @@ namespace MyGame.levels
 
         public byte[,] byteTileArray;
         public Blok[,] blokArray;
+
+        //colission
+        public List<IblockColided> Collides = new List<IblockColided>();
 
         public BaseLevel(Texture2D _blokTexture, Texture2D _doorTopTexture, Texture2D _doorBotTexture, Texture2D colTexture)
         {
@@ -42,14 +46,17 @@ namespace MyGame.levels
                     if (byteTileArray[x, y] == 1)
                     {
                         blokArray[x, y] = new Blok(blokTexture,collisionTexture, new Vector2(y * 64, x * 64));
+                        Collides.Add(new Blok(blokTexture, collisionTexture, new Vector2(y * 64, x * 64)));
                     }
                     if (byteTileArray[x, y] == 2)
                     {
                         blokArray[x, y] = new Blok(doorTopTexture, collisionTexture, new Vector2(y * 64, x * 64));
+                        Collides.Add(new Blok(blokTexture, collisionTexture, new Vector2(y * 64, x * 64)));
                     }
                     if (byteTileArray[x, y] == 3)
                     {
                         blokArray[x, y] = new Blok(doorBotTexture, collisionTexture, new Vector2(y * 64, x * 64));
+                        Collides.Add(new Blok(blokTexture, collisionTexture, new Vector2(y * 64, x * 64)));
                     }
                 }
             }

@@ -6,10 +6,10 @@ using System.Text;
 
 namespace MyGame.collision
 {
-    interface IblockColided
+    public interface IblockColided
     {
-        protected Rectangle collisionRectangleA { get; set; }
-        protected Rectangle collisionRectangleB { get; set; }
+         Rectangle collisionRectangleA { get; set; }
+         Rectangle collisionRectangleB { get; set; }
 
         void Draw(SpriteBatch spriteBatch);
         void Update(GameTime gameTime);

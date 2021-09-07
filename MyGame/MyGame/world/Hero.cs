@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace MyGame
 {
     class Hero:IGameObject, ITransform,IblockColided
@@ -88,8 +89,8 @@ namespace MyGame
 
         }
 
-        Rectangle IblockColided.collisionRectangleA { get => _collisionRectangleA; set => _collisionRectangleA = value; }
-        Rectangle IblockColided.collisionRectangleB { get => _collisionRectangleB; set => _collisionRectangleB = value; }
+         public Rectangle collisionRectangleA { get => _collisionRectangleA; set => _collisionRectangleA = value; }
+         public Rectangle collisionRectangleB { get => _collisionRectangleB; set => _collisionRectangleB = value; }
 
         public void Update(GameTime gameTime)
         {
@@ -104,7 +105,7 @@ namespace MyGame
             {
                 moveRight = false;
             }
-            _collisionRectangleA = new Rectangle((int)Position.X, (int)Position.Y, 10, 161);
+            _collisionRectangleA = new Rectangle((int)Position.X-130, (int)Position.Y-1890, 10, 161);
             _collisionRectangleB = new Rectangle((int)Position.X + 120, (int)Position.Y, 10, 161);
 
             /* if (inputReader.ReadFollower())
@@ -155,7 +156,7 @@ namespace MyGame
             spriteBatch.Draw(collisionTexture,Position, _collisionRectangleB, Color.AliceBlue, 0, new Vector2(-250, -1890), 0.5f, SpriteEffects.None, 0);
 
 
-
+            spriteBatch.Draw(collisionTexture, _collisionRectangleA, Color.AliceBlue);
         }
     }
 }

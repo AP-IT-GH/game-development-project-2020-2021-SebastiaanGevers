@@ -29,8 +29,8 @@ namespace MyGame.world
             _collisionRectangleBot = new Rectangle((int)pos.X, (int)pos.Y + 44, 64, 20);
         }
 
-        Rectangle IblockColided.collisionRectangleA { get => _collisionRectangleTop; set => _collisionRectangleTop = value; }
-        Rectangle IblockColided.collisionRectangleB { get => _collisionRectangleTop; set => _collisionRectangleTop = value; }
+        public Rectangle collisionRectangleA { get => _collisionRectangleTop; set => _collisionRectangleTop = value; }
+        public Rectangle collisionRectangleB { get => _collisionRectangleTop; set => _collisionRectangleTop = value; }
 
         public void Draw(SpriteBatch spriteBatch)
         {
