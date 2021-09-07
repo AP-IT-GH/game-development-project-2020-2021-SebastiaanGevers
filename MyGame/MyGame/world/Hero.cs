@@ -25,7 +25,24 @@ namespace MyGame
         //movement    
         private Vector2 snelheid;
         private Vector2 versnelling;       
-        public Vector2 Position { get ; set; }        
+        //public Vector2 Position { get ; set; }
+
+        private Vector2 _positionCol { get; set; }
+
+        public Vector2 Position
+        {
+            get { return _positionCol; }
+            set
+            {
+                _positionCol = value;
+                Rectangle temp = _collisionRectangleA;
+                temp.Location = _positionCol.ToPoint();
+                temp.X += 10;
+                collisionRectangleA = temp;
+                temp.X += temp.Width + 0;
+                collisionRectangleB = temp;
+            }
+        }
 
         private bool moveRight = false;
         
@@ -41,6 +58,7 @@ namespace MyGame
         private Rectangle _collisionRectangleA;
         private Rectangle _collisionRectangleB;
         private Texture2D collisionTexture;
+        public bool stopLeft = false;
 
 
 
@@ -84,8 +102,8 @@ namespace MyGame
             // moveCommand = new MoveToCommando();
 
             //collision
-            _collisionRectangleA = new Rectangle((int)Position.X, (int)Position.Y, 10, 161);
-            _collisionRectangleB = new Rectangle((int)Position.X+120, (int)Position.Y, 10, 161);
+            _collisionRectangleA = new Rectangle((int)Position.X, (int)Position.Y, 10, 50);
+            _collisionRectangleB = new Rectangle((int)Position.X+120, (int)Position.Y, 10, 50);
 
         }
 
@@ -105,8 +123,21 @@ namespace MyGame
             {
                 moveRight = false;
             }
-            _collisionRectangleA = new Rectangle((int)Position.X-130, (int)Position.Y-1890, 10, 161);
-            _collisionRectangleB = new Rectangle((int)Position.X + 120, (int)Position.Y, 10, 161);
+            _collisionRectangleA = new Rectangle((int)Position.X+65, (int)Position.Y+945, 10, 85);
+            _collisionRectangleB = new Rectangle((int)Position.X +115, (int)Position.Y+945, 10, 85);
+
+
+            //stoppen van uit collision manger
+
+            if (stopLeft)
+            {
+                if (direction.X ==-1)
+                {
+                    direction.X = 0;
+                }
+                stopLeft = false;
+            }
+
 
             /* if (inputReader.ReadFollower())
              {
@@ -145,18 +176,19 @@ namespace MyGame
 
             if (moveRight)
             {
-                spriteBatch.Draw(heroTextureR, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+                spriteBatch.Draw(heroTextureR, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130,-1890), 0.5f, SpriteEffects.None, 0);
             }
             else
             {
-                spriteBatch.Draw(heroTextureL, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+                spriteBatch.Draw(heroTextureL, Position, animatieR.CurrentFrame.SourceRectangle, Color.White, 0, new Vector2(-130,-1890), 0.5f, SpriteEffects.None, 0);
             }
 
-            spriteBatch.Draw(collisionTexture,Position ,_collisionRectangleA, Color.AliceBlue, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
-            spriteBatch.Draw(collisionTexture,Position, _collisionRectangleB, Color.AliceBlue, 0, new Vector2(-250, -1890), 0.5f, SpriteEffects.None, 0);
+            //spriteBatch.Draw(collisionTexture,Position ,_collisionRectangleA, Color.AliceBlue, 0, new Vector2(-130, -1890), 0.5f, SpriteEffects.None, 0);
+            //spriteBatch.Draw(collisionTexture,Position, _collisionRectangleB, Color.AliceBlue, 0, new Vector2(-250, -1890), 0.5f, SpriteEffects.None, 0);
 
 
             spriteBatch.Draw(collisionTexture, _collisionRectangleA, Color.AliceBlue);
+            spriteBatch.Draw(collisionTexture, _collisionRectangleB, Color.AliceBlue);
         }
     }
 }

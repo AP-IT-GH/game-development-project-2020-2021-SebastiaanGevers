@@ -27,26 +27,30 @@ namespace MyGame.collision
 
         public void CheakCollision()
         {
+           
             foreach (var blok in colidedsBloks)
             {
+                
                 // hero bost op zijkanten
                 if(hero.collisionRectangleA.Intersects(blok.collisionRectangleA)&& hero.collisionRectangleA.Intersects(blok.collisionRectangleB))
-                {                    
-                    Debug.WriteLine("colided with blok left");
+                {
+                    //Debug.WriteLine("colided with blok left");
+                    hero.stopLeft = true;
+                    Console.WriteLine("colided with blok left");
                 }
                 if(hero.collisionRectangleB.Intersects(blok.collisionRectangleA)&& hero.collisionRectangleB.Intersects(blok.collisionRectangleB))
                 {
-                    Debug.WriteLine("colided with blok right");
+                    //Debug.WriteLine("colided with blok right");
                 }
                 //hero bost op boven of onderkant
 
                 if (blok.collisionRectangleA.Intersects(hero.collisionRectangleA)||blok.collisionRectangleA.Intersects(hero.collisionRectangleB))
                 {
-                    Debug.WriteLine("colides with top off blok");
+                   //Debug.WriteLine("colides with top off blok");
                 }
                 if (blok.collisionRectangleB.Intersects(hero.collisionRectangleA) || blok.collisionRectangleB.Intersects(hero.collisionRectangleB))
                 {
-                    Debug.WriteLine("colides with underside off block");
+                    //Debug.WriteLine("colides with underside off block");
                 }
 
 

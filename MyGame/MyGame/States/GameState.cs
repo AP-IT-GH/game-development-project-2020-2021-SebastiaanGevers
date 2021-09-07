@@ -76,6 +76,8 @@ namespace MyGame.States
         {
             level1.CreateWorld();          
             hero.Update(_gameTime);
+            collisionLevel1.CheakCollision();
+
 
 
 
